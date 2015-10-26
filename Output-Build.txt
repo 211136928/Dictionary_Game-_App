@@ -1,0 +1,16 @@
+﻿1>------ Build started: Project: Dictionary_Game _App.Windows, Configuration: Debug x86 ------
+1>c:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\AddTermAndDefinationPage.xaml.cs(65,28,65,41): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
+1>c:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\MainPage.xaml.cs(97,28,97,45): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
+1>c:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\Games\SimpleGame1Page.xaml.cs(32,35,32,37): warning CS0169: The field 'Dictionary_Game_App.Games.SimpleGame1Page.a3' is never used
+1>c:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\Games\SimpleGame1Page.xaml.cs(32,39,32,41): warning CS0169: The field 'Dictionary_Game_App.Games.SimpleGame1Page.a4' is never used
+1>c:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\Games\SimpleGame1Page.xaml.cs(32,43,32,45): warning CS0169: The field 'Dictionary_Game_App.Games.SimpleGame1Page.a5' is never used
+1>c:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\Games\SimpleGame1Page.xaml.cs(32,46,32,48): warning CS0169: The field 'Dictionary_Game_App.Games.SimpleGame1Page.a6' is never used
+1>c:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\Games\SimpleGame1Page.xaml.cs(32,49,32,51): warning CS0169: The field 'Dictionary_Game_App.Games.SimpleGame1Page.a7' is never used
+1>c:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\SQLite.cs(241,15,241,39): warning CS0649: Field 'SQLite.SQLiteConnection._preserveDuringLinkMagic' is never assigned to, and will always have its default value false
+1>  Dictionary_Game _App.Windows -> C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\Dictionary_Game _App.Windows.exe
+2>------ Deploy started: Project: Dictionary_Game _App.Windows, Configuration: Debug x86 ------
+2>Updating the layout...
+2>Copying files: Total <1 mb to layout...
+2>Deployment complete (35ms). Full package name: "b06b6aa4-2b4f-47a9-bc70-c503f287b50f_1.0.0.0_x86__yne1kk1zd314m"
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Deploy: 1 succeeded, 0 failed, 0 skipped ==========

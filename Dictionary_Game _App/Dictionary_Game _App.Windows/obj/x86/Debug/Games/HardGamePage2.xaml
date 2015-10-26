@@ -1,0 +1,190 @@
+﻿<Page
+    x:Class="Dictionary_Game_App.Games.HardGamePage2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dictionary_Game_App.Games"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Black">
+        <TextBlock x:Name="lblWord1" HorizontalAlignment="Left" Margin="253,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="280" Height="39">
+    		<Run Text="ID"/>
+    		<Run Text=" N"/>
+    		<Run Text="u"/>
+    		<Run Text="mber"/>
+        </TextBlock>
+        <TextBox x:Name="txtAnswer1" HorizontalAlignment="Left" Margin="557,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" Height="49"/>
+        <TextBlock x:Name="lblWord2" HorizontalAlignment="Left" Margin="254,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="277" Height="39">
+    		<Run Text="ID"/>
+    		<Run Text=" N"/>
+    		<Run Text="u"/>
+    		<Run Text="mber"/>
+        </TextBlock>
+        <TextBox x:Name="txtAnswer2" HorizontalAlignment="Left" Margin="557,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" Height="49"/>
+        <TextBox x:Name="txtAnswer7" HorizontalAlignment="Left" Margin="557,565,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" Height="49"/>
+        <TextBlock x:Name="lblWord3" HorizontalAlignment="Left" Margin="254,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="275" Height="38">
+    		<Run Text="ID"/>
+    		<Run Text=" N"/>
+    		<Run Text="u"/>
+    		<Run Text="mber"/>
+        </TextBlock>
+        <TextBox x:Name="txtAnswer3" HorizontalAlignment="Left" Margin="557,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" Height="49"/>
+        <TextBlock x:Name="lblWord4" HorizontalAlignment="Left" Margin="253,402,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="276" RenderTransformOrigin="0.519,-0.654" Height="37">
+    		<Run Text="ID"/>
+    		<Run Text=" N"/>
+    		<Run Text="u"/>
+    		<Run Text="mber"/>
+        </TextBlock>
+        <TextBox x:Name="txtAnswer4" HorizontalAlignment="Left" Margin="557,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" Height="47"/>
+        <TextBlock x:Name="lblWord5" HorizontalAlignment="Left" Margin="253,458,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="276" Height="38">
+    		<Run Text="ID"/>
+    		<Run Text=" N"/>
+    		<Run Text="u"/>
+    		<Run Text="mber"/>
+        </TextBlock>
+        <TextBox x:Name="txtAnswer5" HorizontalAlignment="Left" Margin="557,451,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" Height="51"/>
+        <TextBox x:Name="txtAnswer6" HorizontalAlignment="Left" Margin="557,509,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" Height="50"/>
+        <TextBlock x:Name="lblWord6" HorizontalAlignment="Left" Margin="253,517,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="276" Height="38">
+    		<Run Text="ID"/>
+    		<Run Text=" N"/>
+    		<Run Text="u"/>
+    		<Run Text="mber"/>
+        </TextBlock>
+        <TextBlock x:Name="lblWord7" HorizontalAlignment="Left" Margin="254,575,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="275" Text="word" Height="38"/>
+        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="22,647,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.576,2.936"                       Width="122" Height="44"/>
+        <Button x:ConnectionId='2' x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="256,646,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.576,2.936" Width="722"                       Height="45"/>
+        <Button x:ConnectionId='3' x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="1013,717,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.576,2.936"                       Width="346" Height="44"/>
+        <TextBlock x:Name="lblMinutes" HorizontalAlignment="Left" Margin="506,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="46" Text="5" FontWeight="Bold" Height="26" Foreground="#FF1AF94D"/>
+        <TextBlock x:Name="lblDisplayOther_Lang" HorizontalAlignment="Left" Margin="556,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="264" Height="40" Text="Rito hi Xitsonga" FontWeight="Bold"/>
+        <RadioButton x:ConnectionId='4' x:Name="radOtherLang_English" Content="Other language to English" HorizontalAlignment="Left" Margin="1124,110,-1,0" VerticalAlignment="Top" Height="35" FontSize="16" Width="243"                                       />
+        <TextBlock x:Name="lblDisplayEnglish" HorizontalAlignment="Left" Margin="253,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="221" Height="42" Text="English Term" FontWeight="Bold"/>
+        <ComboBox x:ConnectionId='5' x:Name="combGameType" HorizontalAlignment="Left" Margin="899,149,0,0" VerticalAlignment="Top" Width="450" Height="44"                                                 />
+        <Button x:ConnectionId='6' x:Name="btnReloadWords" Content="Reload" HorizontalAlignment="Left" Margin="304,717,0,0" VerticalAlignment="Top" Width="344" Height="44"                             />
+        <TextBlock HorizontalAlignment="Left" Margin="534,576,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="18" Height="38" Text="7"/>
+        <TextBlock HorizontalAlignment="Left" Margin="536,522,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="18" Height="37" Text="6"/>
+        <TextBlock HorizontalAlignment="Left" Margin="534,465,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="18" Height="37" Text="5"/>
+        <TextBlock HorizontalAlignment="Left" Margin="534,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="18" Height="37" Text="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="534,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="21" Height="37" Text="3" RenderTransformOrigin="-1.392,0.675"/>
+        <TextBlock HorizontalAlignment="Left" Margin="536,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="21" Height="37" Text="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="538,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="17" Height="37" Text="1" RenderTransformOrigin="3.088,0.708"/>
+        <TextBlock HorizontalAlignment="Left" Margin="223,575,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="18" Height="38" Text="7"/>
+        <TextBlock HorizontalAlignment="Left" Margin="223,517,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="18" Height="38" Text="6"/>
+        <TextBlock HorizontalAlignment="Left" Margin="223,458,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="18" Height="38" Text="5"/>
+        <TextBlock HorizontalAlignment="Left" Margin="223,402,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="18" Height="37" Text="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="223,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="21" Height="38" Text="3" RenderTransformOrigin="-1.392,0.675"/>
+        <TextBlock HorizontalAlignment="Left" Margin="223,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="21" Height="38" Text="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="223,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="17" Height="39" Text="1" RenderTransformOrigin="3.088,0.708"/>
+        <Image HorizontalAlignment="Left" Height="92" VerticalAlignment="Top" Width="100" Source="ms-appx:///Assets/saFlag.jpg"/>
+        <TextBlock x:Name="lblHint1" HorizontalAlignment="Left" Margin="888,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="139" Height="38">
+        	<Run Text="ID"/>
+        	<Run Text=" N"/>
+        	<Run Text="u"/>
+        	<Run Text="mber"/>
+        </TextBlock>
+        <TextBlock x:Name="lblHint2" HorizontalAlignment="Left" Margin="888,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="139" Height="38">
+        	<Run Text="ID"/>
+        	<Run Text=" N"/>
+        	<Run Text="u"/>
+        	<Run Text="mber"/>
+        </TextBlock>
+        <TextBlock x:Name="lblHint3" HorizontalAlignment="Left" Margin="888,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="139" Height="37">
+        	<Run Text="ID"/>
+        	<Run Text=" N"/>
+        	<Run Text="u"/>
+        	<Run Text="mber"/>
+        </TextBlock>
+        <HyperlinkButton x:ConnectionId='7' x:Name="lnkHint1" Content="Hint" HorizontalAlignment="Left" Margin="816,229,0,0" VerticalAlignment="Top" Width="68" Height="43"                       />
+        <HyperlinkButton x:ConnectionId='8' x:Name="lnkHint2" Content="Hint" HorizontalAlignment="Left" Margin="816,288,0,0" VerticalAlignment="Top" Width="68" Height="43"                       />
+        <HyperlinkButton x:ConnectionId='9' x:Name="lnkHint3" Content="Hint" HorizontalAlignment="Left" Margin="816,338,0,0" VerticalAlignment="Top" Width="68" Height="43"                       />
+        <HyperlinkButton x:ConnectionId='10' x:Name="lnkHint4" Content="Hint" HorizontalAlignment="Left" Margin="816,393,0,0" VerticalAlignment="Top" Width="68" Height="43"                       />
+        <Button x:ConnectionId='11' x:Name="btnStartGame" Content="Start" HorizontalAlignment="Left" Margin="180,119,0,0" VerticalAlignment="Top" Width="197"                           />
+        <RadioButton x:ConnectionId='12' x:Name="radEnglishToOtherLang" Content="English to other language" HorizontalAlignment="Left" Margin="896,109,0,0" VerticalAlignment="Top" Height="35" FontSize="16" Width="220"                                        />
+        <TextBlock x:Name="lblPoints" HorizontalAlignment="Left" Margin="693,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="30" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="588,113,0,0" TextWrapping="Wrap" Text="playing for " VerticalAlignment="Top" Height="25" Width="105" FontSize="20"/>
+        <Button x:ConnectionId='13' x:Name="btnViewAnswers" Content="View Answer" HorizontalAlignment="Left" Margin="693,717,0,0" VerticalAlignment="Top" Width="285" Height="41"                             />
+        <TextBlock x:Name="lblHint5" HorizontalAlignment="Left" Margin="888,459,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="139" Height="38">
+        	<Run Text="ID"/>
+        	<Run Text=" N"/>
+        	<Run Text="u"/>
+        	<Run Text="mber"/>
+        </TextBlock>
+        <TextBlock x:Name="lblHint6" HorizontalAlignment="Left" Margin="888,518,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="139" Height="37">
+        	<Run Text="ID"/>
+        	<Run Text=" N"/>
+        	<Run Text="u"/>
+        	<Run Text="mber"/>
+        </TextBlock>
+        <TextBlock x:Name="lblHint7" HorizontalAlignment="Left" Margin="888,576,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="139" RenderTransformOrigin="0.519,-0.654" Height="36">
+        	<Run Text="ID"/>
+        	<Run Text=" N"/>
+        	<Run Text="u"/>
+        	<Run Text="mber"/>
+        </TextBlock>
+        <HyperlinkButton x:ConnectionId='14' x:Name="lnkHint7" Content="Hint" HorizontalAlignment="Left" Margin="819,568,0,0" VerticalAlignment="Top"                       />
+        <TextBlock HorizontalAlignment="Left" Margin="1016,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="76" Width="272" FontSize="16">
+        	<Run Text="NB: When you click hint link 3 point will be "/>
+        	<Run Text="m"/>
+        	<Run Text="inus from the point"/>
+        	<Run Text="        &#x9;"/>
+        	<Run Text=" you "/>
+        	<Run Text="a"/>
+        	<Run Text="re playing for"/>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="432.43,105.865,0,0" TextWrapping="Wrap" Text="Sec" VerticalAlignment="Top" Height="23.971" Width="35.902" FontSize="20" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="-0.567" TranslateX="-0.207" TranslateY="1.065"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="502.03,108.168,0,0" TextWrapping="Wrap" Text="Min" VerticalAlignment="Top" Height="21.967" Width="41.367" FontSize="20" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.487" TranslateX="-0.194" TranslateY="-0.51"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="lblSecond" HorizontalAlignment="Left" Margin="441,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="33" Text="5" FontWeight="Bold" Height="26" Foreground="#FF1AF94D"/>
+        <TextBlock x:Name="lblHint4" HorizontalAlignment="Left" Margin="888,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="139" Height="37">
+        	<Run Text="ID"/>
+        	<Run Text=" N"/>
+        	<Run Text="u"/>
+        	<Run Text="mber"/>
+        </TextBlock>
+        <TextBlock x:Name="lblCongrtesMsg" HorizontalAlignment="Left" Margin="1016,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="292" RenderTransformOrigin="0.5,0.5" Width="347" FontSize="24">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFF02505"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <HyperlinkButton x:ConnectionId='15' x:Name="lnkHint5" Content="Hint" HorizontalAlignment="Left" Margin="819,456,0,0" VerticalAlignment="Top"                         />
+        <HyperlinkButton x:ConnectionId='16' x:Name="lnkHint6" Content="Hint" HorizontalAlignment="Left" Margin="816,515,0,0" VerticalAlignment="Top"                         />
+        <TextBlock HorizontalAlignment="Left" Margin="588,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="121" FontSize="20">
+        	<Run Text="Total"/>
+        	<Run Text=" point"/>
+        	<Run Text="s"/>
+        	<Run Text=" "/>
+        	<Run Text=" "/>
+        	<Run Text=":"/>
+        </TextBlock>
+        <TextBlock x:Name="lblTotalPoints" HorizontalAlignment="Left" Margin="709,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="63" FontSize="20" Text="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="477,20,0,0" TextWrapping="Wrap" Text="You are playing for !!" VerticalAlignment="Top" Height="37" Width="237" FontSize="24"/>
+        <Ellipse x:Name="elpNum4" Fill="#FF51EC09" HorizontalAlignment="Left" Height="22" Margin="1294,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="21" RenderTransformOrigin="4.476,-0.031"/>
+        <Ellipse x:Name="elpNum3" Fill="#FF51EC09" HorizontalAlignment="Left" Height="22" Margin="1242,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="21" RenderTransformOrigin="4.476,-0.031"/>
+        <Ellipse x:Name="elpNum2" Fill="#FF51EC09" HorizontalAlignment="Left" Height="22" Margin="1191,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="21" RenderTransformOrigin="4.476,-0.031"/>
+        <Ellipse x:Name="elpNum1" Fill="#FF50F105" HorizontalAlignment="Left" Height="22" Margin="1140,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="21" RenderTransformOrigin="4.476,-0.031"/>
+        <TextBlock x:Name="lblName" HorizontalAlignment="Left" Margin="10,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Text="name" FontSize="18" FontWeight="Bold" Height="32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="588,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="135" FontSize="18">
+        	<Run Text="P"/>
+        	<Run Text="oint"/>
+        	<Run Text="s"/>
+        	<Run Text=" Score"/>
+        	<Run Text="d :"/>
+        </TextBlock>
+        <TextBlock x:Name="lblCurrScore" HorizontalAlignment="Left" Margin="709,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="58" FontSize="18" Text="50" Foreground="#FF2FE026"/>
+        <Button x:ConnectionId='17' x:Name="btnExitGame" Content="exit Game" HorizontalAlignment="Left" Margin="7,720,0,0" VerticalAlignment="Top" Width="256"                          />
+        <TextBlock HorizontalAlignment="Left" Margin="728,113,0,0" TextWrapping="Wrap" Text="points" VerticalAlignment="Top" Height="25" Width="60" FontSize="20"/>
+        <CheckBox x:Name="chkDisplayAnswer" Content="Display Wrong answer by message box" HorizontalAlignment="Left" Margin="896,195,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
+

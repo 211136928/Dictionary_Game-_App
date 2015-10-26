@@ -1,0 +1,76 @@
+Afrika	Africa
+Afrika-Dzonga	South africa
+Ahee	Hello
+Ahlamula	Yawn
+Ahlamuleni	Yawning
+Ahlamurile	Yawned
+Ahlula	Judge
+Ahluleni	Judging
+Ahlurile	Judged
+Ahluriwile	Judged
+Aka	Build
+Akani	Build
+Akela	Build for
+Akeni	Building
+Akeriwa	Build for
+Akhawunti	Account
+Akile	Built
+Akisa	Help build
+Akiwa	Build
+Ala	Deny
+Alela	Forbid
+Aleni	Denying
+Alerile	Denied
+Aleriwa	Forbidden
+Ambala	Wear
+Ambarile	Wore
+Ambexa	Dress
+Ambexile	Dressed
+Amerika	United states of america
+Amukela	Receive
+Amukelani	Welcome
+Amukelo	Acceptance
+Amukerile	Received
+Amukeriwile	Welcomed
+Anakanya	Think
+Anakanyeni	Considering
+Anakanyile	Considered
+Anama	Broad
+Anamile	Wide
+Anarhoko	Petticoat
+Andlala	Spread
+Andlaleni	Spreading
+Andlarile	Spread
+Andza	Multiply
+Andzani	Spread
+Andzeni	Multiplying
+Andzile	Multiplied
+Angarha	Cover
+Angarheni	Covering
+Angarhile	Covered
+Angula	Answer
+Anguleni	Answering
+Angulo	Answer
+Angurile	Answered
+Ntotiwile	Anointed
+Antswa	Better
+Antsweni	Better
+Antswile	Better	
+Antswisa	Make better
+Antswisile	Made better
+Apula	Apple
+Arile	Denied
+Arisa	Prevent
+Arisile	Prevented
+Asidi	Acid
+Asma	Asthma
+Ava	Divide
+Avanyisa	Divide
+Avanyisela	Condemn
+Avile	Divided
+Avuxeni	Greeting
+Awara	Hour
+Ayina	Iron
+Ayineni	Ironing
+Ayisi	Ice
+Ayisile	Iced

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MOBILE-LAB15</Machine>
+    <WindowsUser>wisani</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>b06b6aa4-2b4f-47a9-bc70-c503f287b50f</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\obj\x86\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>DF5588B91E71960B12DAA777CEBE491980105CC5F20DBF37616F51DAA9FA9FF6</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>b06b6aa4-2b4f-47a9-bc70-c503f287b50f_1.0.0.0_x86__yne1kk1zd314m</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>b06b6aa4-2b4f-47a9-bc70-c503f287b50f_yne1kk1zd314m!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>b06b6aa4-2b4f-47a9-bc70-c503f287b50f</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=wisani</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-10-16T07:28:44.112</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\Dictionary_Game _App.Windows.exe">
+      <PackagePath>Dictionary_Game _App.Windows.exe</PackagePath>
+      <Modified>2015-10-19T14:57:27.979</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\SQLite.WinRT81\3.8.10.2\Redist\Debug\x86\sqlite3.dll">
+      <PackagePath>sqlite3.dll</PackagePath>
+      <Modified>2015-05-27T09:23:50.709</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T19:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T19:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T19:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T19:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\afri_eng.txt">
+      <PackagePath>afri_eng.txt</PackagePath>
+      <Modified>2015-09-15T08:05:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\eng.txt">
+      <PackagePath>eng.txt</PackagePath>
+      <Modified>2015-09-14T07:45:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\xits_eng.txt">
+      <PackagePath>xits_eng.txt</PackagePath>
+      <Modified>2015-09-14T13:54:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Shared\Assets\saFlag.jpg">
+      <PackagePath>Assets\saFlag.jpg</PackagePath>
+      <Modified>2015-09-05T02:35:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-09-14T12:37:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\AddEngTermTOotherLangTerm.xbf">
+      <PackagePath>AddEngTermTOotherLangTerm.xbf</PackagePath>
+      <Modified>2015-09-16T08:00:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\AddTermAndDefinationPage.xbf">
+      <PackagePath>AddTermAndDefinationPage.xbf</PackagePath>
+      <Modified>2015-09-16T08:00:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\Games\GamePage.xbf">
+      <PackagePath>Games\GamePage.xbf</PackagePath>
+      <Modified>2015-10-19T14:56:15.935</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\Games\HardGame1Page.xbf">
+      <PackagePath>Games\HardGame1Page.xbf</PackagePath>
+      <Modified>2015-10-19T14:56:15.937</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\Games\HardGamePage2.xbf">
+      <PackagePath>Games\HardGamePage2.xbf</PackagePath>
+      <Modified>2015-10-19T14:56:15.939</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\Games\HardGamePage3.xbf">
+      <PackagePath>Games\HardGamePage3.xbf</PackagePath>
+      <Modified>2015-10-19T14:56:15.942</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\Games\SimpleGame1Page.xbf">
+      <PackagePath>Games\SimpleGame1Page.xbf</PackagePath>
+      <Modified>2015-09-25T14:31:17.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-09-17T15:01:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\Dictionary_Game _App.Windows.xr.xml">
+      <PackagePath>Dictionary_Game _App.Windows.xr.xml</PackagePath>
+      <Modified>2015-10-09T15:29:42.255</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wisani\Desktop\game woring on\update\Dictionary_Game _App\Dictionary_Game _App\Dictionary_Game _App.Windows\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-10-16T07:28:43.737</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

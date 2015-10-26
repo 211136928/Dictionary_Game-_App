@@ -1,0 +1,104 @@
+﻿<Page
+    x:Class="Dictionary_Game_App.Games.SimpleGame1Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dictionary_Game_App.Games"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource AppBarBorderThemeBrush}">
+
+        <TextBox x:Name="txtWord1" HorizontalAlignment="Left" Margin="420,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" FontSize="20" Height="38"/>
+        <TextBox x:Name="txtWord2" HorizontalAlignment="Left" Margin="420,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" Height="38"/>
+        <TextBox x:Name="txtWord7" HorizontalAlignment="Left" Margin="420,487,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" Height="38"/>
+        <TextBox x:Name="txtWord3" HorizontalAlignment="Left" Margin="420,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" Height="37"/>
+        <TextBox x:Name="txtWord4" HorizontalAlignment="Left" Margin="420,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" Height="38"/>
+        <TextBox x:Name="txtWord5" HorizontalAlignment="Left" Margin="420,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" Height="38"/>
+        <TextBox x:Name="txtWord6" HorizontalAlignment="Left" Margin="420,442,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" Height="38"/>
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="376,597,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.576,2.936" Width="639" Click="btnPlay_Click" Height="63">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="89" VerticalAlignment="Top" Width="100" Source="ms-appx:///Assets/saFlag.jpg"/>
+        <TextBlock x:Name="lblWord1" HorizontalAlignment="Left" Margin="190,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="204" Height="28">
+    			<Run Text="ID"/>
+
+        </TextBlock>
+        <TextBlock x:Name="lblWord2" HorizontalAlignment="Left" Margin="190,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="182" Height="28">
+    			<Run Text="ID"/>
+
+        </TextBlock>
+        <TextBlock x:Name="lblWord4" HorizontalAlignment="Left" Margin="190,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="204" RenderTransformOrigin="0.519,-0.654" Height="28">
+    			<Run Text="ID"/>
+
+        </TextBlock>
+        <TextBlock x:Name="lblWord5" HorizontalAlignment="Left" Margin="190,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="204" Height="28">
+    			<Run Text="ID"/>
+
+
+        </TextBlock>
+        <TextBlock x:Name="lblWord6" HorizontalAlignment="Left" Margin="190,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="204" Height="29">
+    			<Run Text="ID"/>
+
+        </TextBlock>
+        <ListBox x:Name="lstDisplayEngWord" HorizontalAlignment="Left" Height="342" Margin="956,243,0,0" VerticalAlignment="Top" Width="212" FontSize="20"/>
+        <TextBlock x:Name="lblDisplyLang" HorizontalAlignment="Left" Margin="242,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="349" RenderTransformOrigin="1.196,-3.393" Height="40">
+    			<Run Text="ID"/>
+
+        </TextBlock>
+        <ComboBox x:Name="combGameType" HorizontalAlignment="Left" Margin="839,181,0,0" VerticalAlignment="Top" Width="389" SelectionChanged="combLanguage_SelectionChanged" Height="36"/>
+        <TextBlock x:Name="lblWord1_Copy1" HorizontalAlignment="Left" Margin="839,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="471" Text="Select Language"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="34,682,0,0" VerticalAlignment="Top" Click="btnBack_Click" Width="252" Height="59">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnNext" Content="Next " HorizontalAlignment="Left" Margin="1058,682,0,0" VerticalAlignment="Top" Click="btnNext_Click" Width="252" Height="59">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="lblWord3" HorizontalAlignment="Left" Margin="190,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="204" Height="27">
+    			<Run Text="ID"/>
+
+        </TextBlock>
+        <TextBlock x:Name="lblWord7" HorizontalAlignment="Left" Margin="190,498,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="204" Height="27">
+    			<Run Text="ID"/>
+
+        </TextBlock>
+        <RadioButton x:Name="radOtherLang_Eng" Content="Other lang to Eng" HorizontalAlignment="Left" Margin="1033,104,0,0" VerticalAlignment="Top" Height="48" FontSize="16" Width="195" Checked="radOtherLang_Eng_Checked"/>
+        <RadioButton x:Name="radEng_other_Lang" Content="Eng to other Lang" HorizontalAlignment="Left" Margin="836,104,0,0" VerticalAlignment="Top" Height="43" Width="195" RenderTransformOrigin="0.558,1.273" Checked="radEng_other_Lang_Checked"/>
+        <Button x:Name="btbReloadWord" Content="Reload word" HorizontalAlignment="Left" Margin="467,682,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.189,0.522" Width="451" Height="59" Click="btbReloadWord_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="1202,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="135" Height="36" Text="14:8 min Rem"/>
+        <TextBlock HorizontalAlignment="Left" Margin="762,472,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="122" Height="41" Text="14:8 min Rem"/>
+        <TextBlock HorizontalAlignment="Left" Margin="532,185,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="36" Width="154" FontSize="20"/>
+        <TextBlock x:Name="lblAnswer1" HorizontalAlignment="Left" Margin="532,185,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="36" Width="154" FontSize="20"/>
+        <TextBlock x:Name="lblAnswer7" HorizontalAlignment="Left" Margin="532,498,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="36" Width="154" FontSize="20"/>
+        <TextBlock x:Name="lblAnswer6" HorizontalAlignment="Left" Margin="532,442,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="36" Width="154" FontSize="20"/>
+        <TextBlock x:Name="lblAnswer5" HorizontalAlignment="Left" Margin="532,392,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="36" Width="154" FontSize="20"/>
+        <TextBlock x:Name="lblAnswer4" HorizontalAlignment="Left" Margin="532,342,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="36" Width="154" FontSize="20"/>
+        <TextBlock x:Name="lblAnswer3" HorizontalAlignment="Left" Margin="532,292,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="36" Width="154" FontSize="20"/>
+        <TextBlock x:Name="lblAnswer2" HorizontalAlignment="Left" Margin="532,243,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="36" Width="154" FontSize="20"/>
+
+
+
+    </Grid>
+</Page>
