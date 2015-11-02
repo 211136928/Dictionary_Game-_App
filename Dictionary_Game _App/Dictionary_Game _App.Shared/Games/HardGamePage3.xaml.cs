@@ -1,4 +1,5 @@
 ﻿using Dictionary_Game__App;
+using Dictionary_Game__App.Tables;
 using Dictionary_Game_App.Tables;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,24 +30,28 @@ namespace Dictionary_Game_App.Games
         string[] arrEng = new string[100];
         string[] arrOther = new string[100];
         string[] arrAnswer = new string[10];
-        int points = 100;
-        int currCoount = 355;
-        int minutes = 7;
-        int myPoint = 0;
+        int pointsScored = 0;
+        int pointsPlayFor = 100;
+        int seconds = 25;
+        int minutes = 2;
+        int TotalPoints = 0;
         int gamePlayed = 0;
+        int numPlay = 0;
+        string nam;
         DispatcherTimer mytimer = new DispatcherTimer();
         public HardGamePage3()
         {
             this.InitializeComponent();
             radOtherLang_Eng.IsChecked = true;
-            btnPlay.IsEnabled = false; btnNext.IsEnabled = false;
+            btnPlay.IsEnabled = false; 
             txtAnswer1.IsEnabled = false; txtAnswer2.IsEnabled = false; txtAnswer3.IsEnabled = false;
             txtAnswer4.IsEnabled = false; txtAnswer5.IsEnabled = false; txtAnswer6.IsEnabled = false;
             txtAnswer7.IsEnabled = false; txtAnswer8.IsEnabled = false; txtAnswer9.IsEnabled = false; txtAnswer10.IsEnabled = false;
             mytimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
             mytimer.Tick += mytimer_Tick;
             lblMinutes.Text = minutes.ToString();
-            lblPoints.Text = points.ToString();
+            lblSecond.Text = seconds.ToString();
+            lblPointsPlayFor.Text = pointsPlayFor.ToString();
             
             //call the method and populate the lebel whith data
             setWordLebal();
@@ -53,18 +59,72 @@ namespace Dictionary_Game_App.Games
             mytimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
             mytimer.Tick += mytimer_Tick;
         }
-
-        private void mytimer_Tick(object sender, object e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            lblSecond.Text = currCoount--.ToString();
+            var part = e.Parameter as string;
+            //lblMinutes.Text = part.ToString();
+            // myPoints = Convert.ToInt32(part);
+            int pos = part.IndexOf(" ");
 
+            TotalPoints = Convert.ToInt32(part.Substring(0, pos).Trim());
+            lblTotalPoints.Text = pos.ToString();
+            part = part.Remove(0, pos + 1);
+            pos = part.IndexOf(" ");
+
+            numPlay = Convert.ToInt32(part.Substring(0, pos).Trim());
+            part = part.Remove(0, pos + 1);
+            lblName.Text = part;
+            nam = part;
+            lblTotalPoints.Text = TotalPoints.ToString(); //myPoints.ToString();
+            lblName.Text = nam;
+
+            if (numPlay == 3)
+            {
+                elpNum1.Fill = new SolidColorBrush(Colors.Red);
+                elpNum2.Fill = new SolidColorBrush(Colors.Red);
+            }
+            else if (numPlay == 2)
+            {
+                elpNum3.Fill = new SolidColorBrush(Colors.Red);
+                elpNum2.Fill = new SolidColorBrush(Colors.Red);
+                elpNum1.Fill = new SolidColorBrush(Colors.Red);
+            }
+            else if (numPlay == 1)
+            {
+                elpNum4.Fill = new SolidColorBrush(Colors.Red);
+                elpNum3.Fill = new SolidColorBrush(Colors.Red);
+                elpNum2.Fill = new SolidColorBrush(Colors.Red);
+                elpNum1.Fill = new SolidColorBrush(Colors.Red);
+            }
+        }
+        private async void mytimer_Tick(object sender, object e)
+        {
+            bool isAdded;
+            insertData objH = new insertData();
+            lblSecond.Text = seconds--.ToString();
+            lblMinutes.Text = minutes.ToString();
 
             if (lblSecond.Text.Trim() == "0")
             {
                 mytimer.Stop();
+                if(numPlay == 5 ){ elpNum1.Fill = new SolidColorBrush(Colors.Red); numPlay--;}
+                else if (numPlay == 4) { elpNum2.Fill = new SolidColorBrush(Colors.Red); numPlay--; }
+                else if (numPlay == 3) { elpNum3.Fill = new SolidColorBrush(Colors.Red); numPlay--; }
+                else if (numPlay == 2) { elpNum4.Fill = new SolidColorBrush(Colors.Red); numPlay--; }
+                else if (numPlay == 1) { elpNum5.Fill = new SolidColorBrush(Colors.Red); numPlay--; }
+             
+                else
+                {
+                   
+                    btnStart.IsEnabled = false;
+
+                    isAdded = await objH.insertHighScore(nam, TotalPoints);
+                    messageBox("Game over try again"); //mytimer.Stop();
+                }
+                seconds = 25;
             }
 
-            if (currCoount % 60 == 0)
+            if (seconds % 10 == 0)
             {
                 minutes--;
                 lblMinutes.Text = minutes.ToString();
@@ -74,14 +134,14 @@ namespace Dictionary_Game_App.Games
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
             bool ans = true;
-            int rCount = 7;
+            int rCount = 10;
             string msg = "";
             //checking the answer for text field 1
             if (txtAnswer1.IsEnabled == true)
             {
                 if (txtAnswer1.Text.ToUpper().Trim() != arrAnswer[0].ToUpper().Trim())
                 {
-                    msg = "answer number 1 is incorrect \n"; ans = false; rCount--;
+                    msg = "Answer number 1 is incorrect \n"; ans = false; rCount--;
                     txtAnswer1.BorderBrush = new SolidColorBrush(Colors.Red);
                 }
                 else
@@ -90,9 +150,10 @@ namespace Dictionary_Game_App.Games
 
                     if (lblHint1.Text == "")
                     {
-                        myPoint += 10;
+                        TotalPoints += 10;
+                        pointsScored += 10;
                     }
-                    else { myPoint += 5; } txtAnswer1.IsEnabled = false;
+                    else { TotalPoints += 5; pointsScored += 5; } txtAnswer1.IsEnabled = false;
                 }
             }
             //checking the answer for text field 2
@@ -110,9 +171,10 @@ namespace Dictionary_Game_App.Games
                      // txtAnswer2.ForeColor = Colors.Green;
                     if (lblHint2.Text == "")
                     {
-                        myPoint += 10;
+                        TotalPoints += 10;
+                        pointsScored += 10;
                     }
-                    else { myPoint += 5; }txtAnswer2.IsEnabled = false;
+                    else { TotalPoints += 5; pointsScored += 5; } txtAnswer2.IsEnabled = false;
                 }
             }
             //checking the answer for text field 3
@@ -128,9 +190,10 @@ namespace Dictionary_Game_App.Games
                     txtAnswer3.BorderBrush = new SolidColorBrush(Colors.Green);
                     if (lblHint3.Text == "")
                     {
-                        myPoint += 10;
+                        TotalPoints += 10;
+                        pointsScored += 10;
                     }
-                    else { myPoint += 5; }
+                    else { TotalPoints += 5; pointsScored += 5; }
                     txtAnswer3.IsEnabled = false;
                 }
             }
@@ -147,9 +210,10 @@ namespace Dictionary_Game_App.Games
                     txtAnswer4.BorderBrush = new SolidColorBrush(Colors.Green);
                     if (lblHint4.Text == "")
                     {
-                        myPoint += 10;
+                        TotalPoints += 10;
+                        pointsScored += 10;
                     }
-                    else { myPoint += 5; } txtAnswer4.IsEnabled = false;
+                    else { TotalPoints += 5; pointsScored += 5; } txtAnswer4.IsEnabled = false;
                 }
             }
             //checking the answer for text field 5
@@ -165,9 +229,10 @@ namespace Dictionary_Game_App.Games
                     txtAnswer5.BorderBrush = new SolidColorBrush(Colors.Green);
                     if (lblHint5.Text == "")
                     {
-                        myPoint += 10;
+                        TotalPoints += 10;
+                        pointsScored += 10;
                     }
-                    else { myPoint += 5; } txtAnswer5.IsEnabled = false;
+                    else { TotalPoints += 5; pointsScored += 5; } txtAnswer5.IsEnabled = false;
 
                 }
             }
@@ -185,9 +250,10 @@ namespace Dictionary_Game_App.Games
                     txtAnswer6.BorderBrush = new SolidColorBrush(Colors.Green);
                     if (lblHint6.Text == "")
                     {
-                        myPoint += 10;
+                        TotalPoints += 10;
+                        pointsScored += 10;
                     }
-                    else { myPoint += 5; } txtAnswer6.IsEnabled = false;
+                    else { TotalPoints += 5; pointsScored += 5; } txtAnswer6.IsEnabled = false;
 
                 }
             }
@@ -205,9 +271,10 @@ namespace Dictionary_Game_App.Games
                     txtAnswer7.BorderBrush = new SolidColorBrush(Colors.Green);
                     if (lblHint7.Text == "")
                     {
-                        myPoint += 10;
+                        TotalPoints += 10;
+                        pointsScored += 10;
                     }
-                    else { myPoint += 5; } txtAnswer7.IsEnabled = false;
+                    else { TotalPoints += 5; pointsScored += 5; } txtAnswer7.IsEnabled = false;
                 }
             }
             //checking the answer for text field 8
@@ -223,9 +290,10 @@ namespace Dictionary_Game_App.Games
                     txtAnswer8.BorderBrush = new SolidColorBrush(Colors.Green);
                     if (lblHint8.Text == "")
                     {
-                        myPoint += 10;
+                        TotalPoints += 10;
+                        pointsScored += 10;
                     }
-                    else { myPoint += 5; } txtAnswer8.IsEnabled = false;
+                    else { TotalPoints += 5; pointsScored += 5; } txtAnswer8.IsEnabled = false;
                 }
             }
             //checking the answer for text field 9
@@ -240,9 +308,10 @@ namespace Dictionary_Game_App.Games
                     txtAnswer9.BorderBrush = new SolidColorBrush(Colors.Green);
                        if (lblHint9.Text == "")
                     {
-                        myPoint += 10;
+                        TotalPoints += 10;
+                        pointsScored += 10;
                     }
-                    else { myPoint += 5; } txtAnswer9.IsEnabled = false;
+                       else { TotalPoints += 5; pointsScored += 5; } txtAnswer9.IsEnabled = false;
                 }
             }
             //checking the answer for text field 10
@@ -257,24 +326,38 @@ namespace Dictionary_Game_App.Games
                     txtAnswer10.BorderBrush = new SolidColorBrush(Colors.Green);
                     if (lblHint10.Text == "")
                     {
-                        myPoint += 10;
+                        TotalPoints += 10;
+                        pointsScored += 10;
                     }
-                    else { myPoint += 5; } txtAnswer10.IsEnabled = false;
+                    else { TotalPoints += 5; pointsScored += 5; } txtAnswer10.IsEnabled = false;
                 }
             }
 
-            lblMypoints.Text = myPoint.ToString();
-            if (rCount >= 4)
+            lblPointsScored.Text = pointsScored.ToString();
+            lblTotalPoints.Text = TotalPoints.ToString();
+
+
+            if (rCount == 10)
             {
-                btnNext.IsEnabled = true;
-                
-                lblCongrtesMsg.Text = "You got " + rCount.ToString() + " correct you can go to the next round or play again to get all right";
+                lblCongrtesMsg.Text = "Congratulation!!!! You got " + rCount.ToString() + " correct you can go to the next round ";
+                if (numPlay == 4) { elpNum1.Fill = new SolidColorBrush(Colors.Green); numPlay++; }
+                else if (numPlay == 3) { elpNum2.Fill = new SolidColorBrush(Colors.Green); numPlay++; }
+                else if (numPlay == 2) { elpNum3.Fill = new SolidColorBrush(Colors.Green); numPlay++; }
+                else if (numPlay == 1) { elpNum4.Fill = new SolidColorBrush(Colors.Green); numPlay++; }
+                else if (numPlay == 0) { elpNum5.Fill = new SolidColorBrush(Colors.Green); numPlay++; }
+                minutes = 2;
+                seconds = 25;
+                btnStart.IsEnabled = false;
+                mytimer.Stop();
             }
+
+
+
 
             if (ans == true)
             {
                 messageBox("Congratulation You can go to the next round. YOU GOT ALL 10 ANSWER RIGHT");
-                btnNext.IsEnabled = true;
+               
                 lblCongrtesMsg.Text = " Congratulation!!!! You got " + rCount.ToString() + " correct you can go to the next round ";
                 btnReloadWords.IsEnabled = true;
                 gamePlayed++;
@@ -299,19 +382,17 @@ namespace Dictionary_Game_App.Games
             txtAnswer7.BorderBrush = new SolidColorBrush(Colors.White); txtAnswer8.BorderBrush = new SolidColorBrush(Colors.White); txtAnswer9.BorderBrush = new SolidColorBrush(Colors.White);
             txtAnswer10.BorderBrush = new SolidColorBrush(Colors.White);
             btnReloadWords.IsEnabled = false;
-            btnPlay.IsEnabled =  true;
+            btnPlay.IsEnabled =  false;
+            btnStart.IsEnabled = true;
+            pointsScored = 0;
+            pointsPlayFor = 100;
+            lblPointsPlayFor.Text = pointsPlayFor.ToString();
+            lblPointsScored.Text = pointsScored.ToString();
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(HardGamePage2));
-        }
+      
 
-        private void btnNext_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+    
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             mytimer.Start();
@@ -347,7 +428,23 @@ namespace Dictionary_Game_App.Games
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
             await msgDisplay.ShowAsync();
         }
+        private async void msg()
+        {
+            insertData objH = new insertData();
+            bool isAdded;
+            var messgeDialog = new MessageDialog("Are you sure you want to exit this game?");
+            messgeDialog.Commands.Add(new UICommand("Yes"));
+            messgeDialog.Commands.Add(new UICommand("No"));
+            messgeDialog.DefaultCommandIndex = 0;
+            messgeDialog.CancelCommandIndex = 1;
+            var result = await messgeDialog.ShowAsync();
+            if (result.Label.Equals("Yes"))
+            {
+                isAdded = await objH.insertHighScore(nam, TotalPoints);
+                this.Frame.Navigate(typeof(GamePage));
+            }
 
+        }
         //this methos is for loading data to arrays from the data base;
         private async void setWordLebal()
         {
@@ -460,8 +557,8 @@ namespace Dictionary_Game_App.Games
         private void lnkHint1_Click(object sender, RoutedEventArgs e)
         {
             lnkHint1.IsEnabled = false;
-             points = points - 5;
-            lblPoints.Text = points.ToString();
+            pointsPlayFor = pointsPlayFor - 5;
+            lblPointsPlayFor.Text = pointsPlayFor.ToString();
             string answer;
             int l;
             answer = arrAnswer[0];
@@ -472,8 +569,8 @@ namespace Dictionary_Game_App.Games
         private void lnkHint2_Click(object sender, RoutedEventArgs e)
         {
             lnkHint2.IsEnabled = false;
-             points = points - 5;
-            lblPoints.Text = points.ToString();
+            pointsPlayFor = pointsPlayFor - 5;
+            lblPointsPlayFor.Text = pointsPlayFor.ToString();
             string answer;
             int l;
             answer = arrAnswer[1];
@@ -484,8 +581,8 @@ namespace Dictionary_Game_App.Games
         private void lnkHint3_Click(object sender, RoutedEventArgs e)
         {
             lnkHint3.IsEnabled = false;
-            points = points - 5;
-             lblPoints.Text = points.ToString();
+            pointsPlayFor = pointsPlayFor - 5;
+            lblPointsPlayFor.Text = pointsPlayFor.ToString();
             string answer;
             int l;
             answer = arrAnswer[2];
@@ -496,8 +593,9 @@ namespace Dictionary_Game_App.Games
         private void lnkHint4_Click(object sender, RoutedEventArgs e)
         {
             lnkHint4.IsEnabled = false;
-             points = points - 5;
-             lblPoints.Text = points.ToString();
+            pointsPlayFor = pointsPlayFor - 5;
+            lblPointsPlayFor.Text = pointsPlayFor.ToString();
+        
             string answer;
             int l;
             answer = arrAnswer[3];
@@ -507,8 +605,8 @@ namespace Dictionary_Game_App.Games
         private void lnkHint5_Click(object sender, RoutedEventArgs e)
         {
             lnkHint5.IsEnabled = false;
-            points = points - 5;
-            lblPoints.Text = points.ToString();
+            pointsPlayFor = pointsPlayFor - 5;
+            lblPointsPlayFor.Text = pointsPlayFor.ToString(); 
             string answer;
             int l;
             answer = arrAnswer[4];
@@ -518,8 +616,8 @@ namespace Dictionary_Game_App.Games
         private void lnkHint6_Click(object sender, RoutedEventArgs e)
         {
             lnkHint6.IsEnabled = false;
-            points = points - 5;
-            lblPoints.Text = points.ToString();
+            pointsPlayFor = pointsPlayFor - 5;
+            lblPointsPlayFor.Text = pointsPlayFor.ToString();
             string answer;
             int l;
             answer = arrAnswer[5];
@@ -529,8 +627,8 @@ namespace Dictionary_Game_App.Games
         private void lnkHint7_Click(object sender, RoutedEventArgs e)
         {
             lnkHint7.IsEnabled = false;
-            points = points - 5;
-            lblPoints.Text = points.ToString();
+            pointsPlayFor = pointsPlayFor - 5;
+            lblPointsPlayFor.Text = pointsPlayFor.ToString();
             string answer;
             int l;
             answer = arrAnswer[6];
@@ -540,8 +638,8 @@ namespace Dictionary_Game_App.Games
         private void lnkHint8_Click(object sender, RoutedEventArgs e)
         {
             lnkHint8.IsEnabled = false;
-            points = points - 5;
-            lblPoints.Text = points.ToString();
+            pointsPlayFor = pointsPlayFor - 5;
+            lblPointsPlayFor.Text = pointsPlayFor.ToString();
             string answer;
             int l;
             answer = arrAnswer[7];
@@ -552,8 +650,8 @@ namespace Dictionary_Game_App.Games
         {
 
             lnkHint9.IsEnabled = false;
-            points = points - 5;
-            lblPoints.Text = points.ToString();
+            pointsPlayFor = pointsPlayFor - 5;
+            lblPointsPlayFor.Text = pointsPlayFor.ToString();
             string answer;
             int l;
             answer = arrAnswer[8];
@@ -565,8 +663,8 @@ namespace Dictionary_Game_App.Games
         {
 
             lnkHint10.IsEnabled = false;
-            points = points - 5;
-            lblPoints.Text = points.ToString();
+            pointsPlayFor = pointsPlayFor - 5;
+            lblPointsPlayFor.Text = pointsPlayFor.ToString();
             string answer;
             int l;
             answer = arrAnswer[9];
@@ -578,6 +676,31 @@ namespace Dictionary_Game_App.Games
         {
 
         }
+
+        private void lblPointsPlayFor_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void lblPointsScored_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void lblMinutes_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            msg();
+        }
+
+       
+
+     
+
 
       
 

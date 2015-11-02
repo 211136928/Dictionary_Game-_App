@@ -293,6 +293,10 @@ namespace Dictionary_Game_App.Games
         }
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
+            if(Numplay == 3)
+            {
+                Numplay++;
+            }
             var pont = myPoint.ToString() + " "+ Numplay.ToString() + " "+name ;
             lblWord1.Text = pont.ToString();
             this.Frame.Navigate(typeof(HardGamePage2),pont);

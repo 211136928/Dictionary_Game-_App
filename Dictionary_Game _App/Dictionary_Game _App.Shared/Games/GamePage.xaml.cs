@@ -50,7 +50,7 @@ namespace Dictionary_Game_App.Games
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(HardGamePage3));
+            //this.Frame.Navigate(typeof(HardGamePage3));
         }
 
      

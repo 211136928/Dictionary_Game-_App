@@ -55,7 +55,7 @@
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="22,647,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.576,2.936" Click="btnBack_Click" Width="122" Height="44"/>
         <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="256,646,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.576,2.936" Width="722" Click="btnPlay_Click" Height="45"/>
         <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="1013,717,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.576,2.936" Click="btnNext_Click" Width="346" Height="44"/>
-        <TextBlock x:Name="lblMinutes" HorizontalAlignment="Left" Margin="506,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="46" Text="5" FontWeight="Bold" Height="26" Foreground="#FF1AF94D"/>
+        <TextBlock x:Name="lblMinutes" HorizontalAlignment="Left" Margin="506,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="46" Text="5" FontWeight="Bold" Height="26" Foreground="#FF1AF94D" SelectionChanged="lblMinutes_SelectionChanged"/>
         <TextBlock x:Name="lblDisplayOther_Lang" HorizontalAlignment="Left" Margin="556,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="264" Height="40" Text="Rito hi Xitsonga" FontWeight="Bold"/>
         <RadioButton x:Name="radOtherLang_English" Content="Other language to English" HorizontalAlignment="Left" Margin="1124,110,-1,0" VerticalAlignment="Top" Height="35" FontSize="16" Width="243" Checked="radOtherLang_English_Checked"/>
         <TextBlock x:Name="lblDisplayEnglish" HorizontalAlignment="Left" Margin="253,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="221" Height="42" Text="English Term" FontWeight="Bold"/>
@@ -141,7 +141,7 @@
                 <CompositeTransform Rotation="0.487" TranslateX="-0.194" TranslateY="-0.51"/>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock x:Name="lblSecond" HorizontalAlignment="Left" Margin="441,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="33" Text="5" FontWeight="Bold" Height="26" Foreground="#FF1AF94D"/>
+        <TextBlock x:Name="lblSecond" HorizontalAlignment="Left" Margin="428,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="46" Text="5" FontWeight="Bold" Height="26" Foreground="#FF1AF94D"/>
         <TextBlock x:Name="lblHint4" HorizontalAlignment="Left" Margin="888,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="139" Height="37">
         	<Run Text="ID"/>
         	<Run Text=" N"/>
